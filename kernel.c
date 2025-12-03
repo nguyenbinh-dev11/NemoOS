@@ -1,6 +1,4 @@
-#include <stdint.h>
-#include <stddef.h>
-#include <stdbool.h>
+#include <define.h>
 
 #ifdef __linux__
 #endif
@@ -122,9 +120,6 @@ static inline uint8_t inb(uint16_t port) {
 #define KBD_DATA_PORT 0x60 // Dữ liệu mã quét
 
 // --- Keyboard Handler ---
-
-// Bảng mã quét cơ bản (Chỉ Series 1 - không bao gồm Shift, Alt, Ctrl, v.v.)
-// Đây là một bảng rất đơn giản, chỉ chứa các ký tự cơ bản, không xử lý dịch phím (shift)
 static const unsigned char kbdus[128] =
 {
     0,  27, '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-', '=', '\b',
